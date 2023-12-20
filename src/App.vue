@@ -1,30 +1,37 @@
 <template>
-  <nav>
+  
+  <main class="container-fluid">
+    <router-view />
+  </main>
+  
+  
+
+  
+  <!-- Navbar -->
+  <!-- <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/resume">Resume</router-link> |
+    <router-link to="/projects">Project</router-link> |
+    <router-link to="/skills">Review</router-link> |
+    <router-link to="/contact">Reach Me</router-link> 
+  </nav> -->
+  <NavBar/>
+  <FooterView/>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import FooterView from './components/FooterView.vue';
+import NavBar from './components/NavBar.vue';
 
-nav {
-  padding: 30px;
-}
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+export default {
+  components: {
+    NavBar,
+    FooterView,
+  }
 }
+</script>
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+
+<style src="@/assets/css/style.css"></style>
